@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: Calibri;
+    background: linear-gradient(135deg, #ffd1dc, white);
+}
+
+.money-bg {
+    position: fixed;
+    inset: 0;
+    background-image: url("../images/money.png");
+    background-size: 140px;
+    opacity: 0.12;
+    animation: floatMoney 45s linear infinite;
+    z-index: -1;
+}
+
+@keyframes floatMoney {
+    from { background-position: 0 0; }
+    to { background-position: 0 -2000px; }
+}
+
+.glass-container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+}
+
+h1 {
+    font-family: Poppins;
+    text-align: center;
+}
+
+.form-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.form-section input,
+.form-section select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 180px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #ff7aa2, #ff4d79);
+    color: white;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #ff7aa2;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    background: white;
+    padding: 12px;
+    text-align: center;
+}
+
+.action-btn {
+    padding: 6px 14px;
+    border-radius: 10px;
+    border: none;
+    background: #ff7aa2;
+    color: white;
+    cursor: pointer;
+}
+
+.action-btn.save-mode {
+    background: #28a745;
+}
+
+.update-btn {
+    background-color: #2ecc71; /* green */
+    color: #ffffff;
+}
+
+.update-btn:hover {
+    background-color: #27ae60;
+}
+
+/* DELETE button - Red */
+.delete-btn {
+    background-color: #e74c3c; /* red */
+    color: #ffffff;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}

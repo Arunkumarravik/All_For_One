@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expected Expense</title>
+    <link rel="stylesheet" href="../Css/Expense_Styles.css">
+</head>
+<body>
+
+<div class="money-bg"></div>
+
+<div class="glass-container">
+    <h1>Expected Expense for the Month</h1>
+
+    <!-- FORM SECTION -->
+    <div class="form-section">
+        <input type="text" id="categoryInput" placeholder="Category">
+        <input type="number" id="expenseInput" placeholder="Expected Expense">
+        <button class="btn" onclick="addRow()">➕ Add</button>
+    </div>
+
+    <!-- TABLE -->
+    <table id="expTable">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Expected Expense</th>
+                <th>Money in Reserve</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="../Js/Exp_For_Month_App.js"></script>
+</body>
+</html>
