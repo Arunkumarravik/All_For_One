@@ -9,7 +9,7 @@ function goToMyExpense() {
     location.href = "My_Expense.html";
 }
 function goToSplitExpense() {
-    location.href = "Split_Expense.html";
+    location.href = "Collab_Exp.html";
 }
 function nav(page) {
     location.href = page + ".html";

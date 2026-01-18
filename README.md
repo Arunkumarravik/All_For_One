@@ -6,7 +6,7 @@ This allows you to bathe in your own data
 Task_Details      Html      Css     Js     Backend-Python        Testing         Final_completion
 
 1)My_Expense       ✔        ✔       ✔          X                  X                X
-2)Collab_Expense   X         X       X          X                  X                X
+2)Collab_Expense   ✔        ✔       ✔          X                  X                X
 3)User Login       X         X       X          X                  X                X
 4)Boat             X         X       X          X                  X                X
 5)Fishes           X         X       X          X                  X                X
