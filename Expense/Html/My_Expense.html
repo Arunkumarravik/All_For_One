@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Expense</title>
+    <link rel="stylesheet" href="../Css/My_Expense_Styles.css">
+</head>
+<body>
+
+<div class="money-bg"></div>
+
+<div class="glass-container">
+    <h1>My Expenses</h1>
+
+    <!-- FORM -->
+    <div class="form-section">
+        <input type="text" id="expenseDetail" placeholder="Expense Detail">
+        <input type="text" id="category" placeholder="Category">
+        <input type="date" id="date">
+        <input type="number" id="amount" placeholder="Amount Spent">
+        <input type="number" id="reserve" placeholder="Actual Reserve" disabled>
+
+        <select id="isSplit" onchange="toggleSplit()">
+            <option value="no">Is Split? No</option>
+            <option value="yes">Is Split? Yes</option>
+        </select>
+
+        <input type="number" id="persons" placeholder="No. of Persons"
+               style="display:none">
+
+        <button class="btn" onclick="addExpense()">➕ Add</button>
+    </div>
+
+    <!-- TABLE -->
+    <table id="expenseTable">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Expense Details</th>
+                <th>Date</th>
+                <th>Total Amount</th>
+                <th>My Share</th>
+                <th>Outstanding Reserve</th>
+                <th>Split Count</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="../Js/My_Expense_App.js"></script>
+</body>
+</html>

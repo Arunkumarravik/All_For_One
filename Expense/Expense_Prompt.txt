@@ -1,0 +1,42 @@
+Your role is to Generate me frontend website for tracking the expense every day 
+I will tell you what are all the features I want from the top and next Will explain what are all g
+Funtionlity you need to implement for each element
+Features I need:
+
+1)At the Top - Center , leave some space and Put Hi there ! what is your expense for the day :  {Today's Date} 
+2) Below that button leave some space and create a button that asks what is the expected expense of the month : {Current Month Name}
+3) Leave some space at the below and create buttons which looks like those two buttons should be like a branch of the above expected expense button - visibly in front end
+4) leave some spae , The Left branch of the button  should have , Expense from my side and right side should have expense collabared expense ( Amounts will be splitted across friends , groups ..)
+5) after that leave some space below and creae five  buttons , side by side with necessary spacing 
+   and create three buttons named boat , fishes , vortex ,treasures , ---- (at last the) final Island -- if possible put arrow mark in between each button.
+   
+ Now I will tell you how the html , css , js folder is:
+1) Html folder:
+	Expense.Html 
+	Expected_Exp_fr_Month.html 
+	My_Expense.Html -- 
+	Split_Expense.Html 
+	boat.html -- (It will have the expected expense for the family for the particular month) 
+	fishes.html -- (It will have the money that was earned and spent by the family for that month).
+	Treasures.html
+	vortex.html
+	Final_Island.html
+2)css:
+	Create seperate css_files for each html page
+	that naming should be {html_page_name}_Styles.css 
+3)Js:
+	Create seperate css_files for each html page
+	that naming should be {html_page_name}_app.js 
+	
+Functionality of each button from top to down:
+a)Expense.html is the main page which is going to contain all these pages as link for the button -> like an index.html
+b)Expected_Exp_fr_Month.html -- After clicking this button in Expense.html , it should route to a page where it has a add button with + symbol , when we click the	
+button 
+it should ask category , expected_expense , money_in_reserve(which has the savings from previous month and if we add another row to the expense , then the money_in_reserve should decreased with expected expense value of previous)
+c)My_Expense.html page should have five sections like the above html 
+it should track  : category  , date , spent_amount ,  Money_in_reserve (for the particular category)  , is_split (if yes then add another one button ,splitted  with how many persons)
+d) And for the remaining fill up with your own things
+
+-for the font : use calibiri body , backgroud theme use pink with white gradient , please use some advanced styling to make the website attrative and leave enough spacing.
+--For the functions -- take the best and approriate method in writing javascript , whereever it involves fetching the info from backend , please add a python endpoint yourself which we can modify later
+

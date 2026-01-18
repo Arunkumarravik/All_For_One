@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="../css/Expense_Styles.css">
+</head>
+<body>
+
+<div class="money-bg"></div>
+
+<div class="glass-container">
+    <h1 id="greeting"></h1>
+
+    <button class="btn" onclick="goToExpected()">
+        Expected Expense for the Month
+    </button>
+
+    <div class="branch">
+        <button class="btn secondary" onclick="goToMyExpense()">Expense from my side</button>
+        <button class="btn secondary" onclick="goToSplitExpense()">Collaborated Expense</button>
+    </div>
+
+    <div class="islands">
+        <button class="island-btn" onclick="nav('boat')">🚤 Boat</button>
+        ➡
+        <button class="island-btn" onclick="nav('fishes')">🐟 Fishes</button>
+        ➡
+        <button class="island-btn" onclick="nav('vortex')">🌀 Vortex</button>
+        ➡
+        <button class="island-btn" onclick="nav('Treasures')">💎 Treasures</button>
+        ➡
+        <button class="island-btn" onclick="nav('Final_Island')">🏝️ Final Island</button>
+    </div>
+</div>
+
+<script src="../Js/Expense_app.js"></script>
+</body>
+</html>
