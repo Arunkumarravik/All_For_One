@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LifeBalance | Welcome</title>
+    <link rel="stylesheet" href="Login_Styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-panel">
+            <h1>LifeBalance</h1>
+            <p>Manage your <span class="time">Time</span>,  
+               <span class="money">Money</span>,  
+               <span class="health">Health</span></p>
+        </div>
+
+        <div class="right-panel">
+            <h2>User Details</h2>
+
+            <form id="userForm">
+                <input type="text" id="username" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="date" id="dob" required>
+                <input type="text" id="location" placeholder="Where are you from?" required>
+                <textarea id="address" placeholder="Address" rows="3" required></textarea>
+
+                <button type="submit">Get Started</button>
+            </form>
+
+            <div id="welcomeBox" class="hidden">
+                <h3>Welcome, <span id="storedName"></span> 👋</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="Login_App.js"></script>
+</body>
+</html>
