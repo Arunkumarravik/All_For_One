@@ -7,7 +7,7 @@ Task_Details      Html      Css     Js     Backend-Python        Testing        
 
 1)My_Expense       ✔        ✔       ✔          X                  X                X
 2)Collab_Expense   ✔        ✔       ✔          X                  X                X
-3)User Login       ✔        ✔       ✔          X                  X                X
+3)User Login       ✔        ✔       ✔          ✔                  X                X
 4)Boat             X         X       X          X                  X                X
 5)Fishes           X         X       X          X                  X                X
 6)Vortex           X         X       X          X                  X                X
@@ -19,8 +19,8 @@ Task_Details      Html      Css     Js     Backend-Python        Testing        
 
 Task_No           Start Date           End_Date         No_of_Days
 1                 05-01-2026           06-01-2026       2
-2                 18-01-2026 
-
+2                 18-01-2026           18-01-2026       0
+3                 21-01-2026             -
 ### Prioritizing the Task:
 
 Task 1: Create the Sample frontend for the calculation for collab expense page 

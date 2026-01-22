@@ -11,27 +11,59 @@
     <div class="container">
         <div class="left-panel">
             <h1>LifeBalance</h1>
-            <p>Manage your <span class="time">Time</span>,  
-               <span class="money">Money</span>,  
+            <p>Manage your <span class="time">Time</span>,
+               <span class="money">Money</span>,
                <span class="health">Health</span></p>
         </div>
 
         <div class="right-panel">
-            <h2>User Details</h2>
 
-            <form id="userForm">
-                <input type="text" id="username" placeholder="Full Name" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="date" id="dob" required>
-                <input type="text" id="location" placeholder="Where are you from?" required>
-                <textarea id="address" placeholder="Address" rows="3" required></textarea>
-
-                <button type="submit">Get Started</button>
-            </form>
-
-            <div id="welcomeBox" class="hidden">
-                <h3>Welcome, <span id="storedName"></span> 👋</h3>
+            <div class="tabs">
+                <button id="loginTab" class="tab active">Login</button>
+                <button id="signupTab" class="tab">Sign Up</button>
             </div>
+          
+
+            <!-- ✅ LOGIN FORM -->
+            <div id="loginSection">
+                <h2>v2 Login</h2>
+
+                <form id="loginForm">
+                    <input type="text" id="loginUsername" placeholder="Username" required>
+                    <div class="password-wrap">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="button" class="toggle-btn" onclick="togglePassword('loginPassword', this)">Show</button>
+                    </div>
+
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+
+            <!-- ✅ SIGNUP FORM -->
+            <div id="signupSection" class="hidden">
+                <h2>Create Account</h2>
+
+                <form id="signupForm">
+                    <input type="text" id="username" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="date" id="dob" required>
+                    <input type="text" id="location" placeholder="Where are you from?" required>
+                    <textarea id="address" placeholder="Address" rows="3" required></textarea>
+
+                    <div class="password-wrap">
+                    <input type="password" id="password" placeholder="Create Password" required>
+                    <button type="button" class="toggle-btn" onclick="togglePassword('password', this)">Show</button>
+                    </div>
+                    <div class="password-wrap">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <button type="button" class="toggle-btn" onclick="togglePassword('confirmPassword', this)">Show</button>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+
+            <div id="msgBox" class="hidden"></div>
+
         </div>
     </div>
 
