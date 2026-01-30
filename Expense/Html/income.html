@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Income</title>
+    <link rel="stylesheet" href="../Css/My_Income_Styles.css">
+</head>
+<body>
+
+<div class="income-bg"></div>
+
+<div class="glass-container">
+    <h1>My Income</h1>
+
+    <div class="form-section">
+        <input type="text" id="incomeSource" placeholder="Income Source">
+
+        <select id="incomeType">
+            <option value="daily">Daily</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+        </select>
+
+        <select id="incomeCategory">
+            <option value="salary">Salary</option>
+            <option value="freelance">Freelance</option>
+            <option value="business">Business</option>
+            <option value="investment">Investment</option>
+            <option value="other">Other</option>
+        </select>
+
+        <input type="date" id="incomeDate">
+        <input type="number" id="incomeAmount" placeholder="Amount">
+
+        <button class="btn" onclick="addIncome()">➕ Add</button>
+    </div>
+
+    <table id="incomeTable">
+        <thead>
+            <tr>
+                <th>Source</th>
+                <th>Category</th>
+                <th>Type</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <button class="btn secondary" onclick="submitIncome()">🚀 Submit Income</button>
+</div>
+
+<script src="../Js/My_Income_App.js"></script>
+</body>
+</html>

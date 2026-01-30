@@ -8,28 +8,66 @@
 
 <div class="money-bg"></div>
 
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="user-info">
+        User: <span id="userName"></span>
+    </div>
+    <div class="savings-box">
+        Savings: ₹ <span id="savingsAmount">--</span>
+    </div>
+</div>
+
 <div class="glass-container">
     <h1>Expected Expense for the Month</h1>
 
-    <!-- FORM SECTION -->
-    <div class="form-section">
-        <input type="text" id="categoryInput" placeholder="Category">
-        <input type="number" id="expenseInput" placeholder="Expected Expense">
-        <button class="btn" onclick="addRow()">➕ Add</button>
+    <!-- TOGGLE -->
+    <div class="toggle-bar">
+        <button class="island-btn active" onclick="showLiving()">Living Expense</button>
+        <button class="island-btn" onclick="showWork()">Work Investment</button>
     </div>
 
-    <!-- TABLE -->
+    <!-- LEFT PANEL -->
+    <div id="livingPanel" class="panel">
+        <h3>Living Expense</h3>
+        <div class="form-section">
+            <input type="text" id="livingDesc" placeholder="Expense">
+            <input type="text" id="livingCategory" placeholder="Category">
+            <input type="number" id="livingAmount" placeholder="Amount">
+            <input type="date" id="Expected_Expense" placeholder="Expected Date">
+            <button class="btn" onclick="addLivingExpense()">Add</button>
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div id="workPanel" class="panel hidden">
+        <h3>Work Investment</h3>
+        <div class="form-section">
+            <input type="text" id="workDesc" placeholder="Work Name">
+            <input type="number" id="workDays" placeholder="Days">
+            <input type="number" id="workPerDay" placeholder="Amount / Day">
+            <input type="date" id="Expected_Expense" placeholder="Expected Date">
+            <button class="btn" onclick="addWorkExpense()">Add</button>
+        </div>
+    </div>
+
+    <!-- COMMON TABLE -->
+    <h3>Expected Expense Summary</h3>
     <table id="expTable">
         <thead>
             <tr>
+                <th>Description</th>
                 <th>Category</th>
-                <th>Expected Expense</th>
-                <th>Money in Reserve</th>
+                <th>Amount</th>
+                <th>Planned</th>
+                <th>Due Date</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody></tbody>
     </table>
+
+    <button class="btn" onclick="submitMonth()">Submit Month</button>
 </div>
 
 <script src="../Js/Exp_For_Month_App.js"></script>

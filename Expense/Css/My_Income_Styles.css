@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: Calibri;
+    background: linear-gradient(135deg, #d4f8d4, #f0fff0);
+    min-height: 100vh;
+}
+
+.income-bg {
+    position: fixed;
+    inset: 0;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.glass-container {
+    width: 85%;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    text-align: center;
+    animation: fadeSlideIn 0.6s ease;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.form-section {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.form-section input,
+.form-section select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 180px;
+    transition: 
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease;
+}
+
+.form-section input:focus,
+.form-section select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 0 3px rgba(76,175,80,0.25);
+    transform: scale(1.02);
+}
+
+.btn {
+    padding: 14px 30px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.3s ease,
+        opacity 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+}
+
+.btn:active {
+    transform: scale(0.96);
+    opacity: 0.85;
+}
+
+.secondary {
+    background: white;
+    color: #2e7d32;
+    border: 2px solid #4caf50;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #4caf50;
+    color: white;
+    padding: 12px;
+    transition: background 0.3s ease;
+}
+
+td {
+    background: white;
+    padding: 12px;
+    transition: background 0.3s ease;
+}
+
+tr:hover td {
+    background: #f1fff1;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .glass-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .form-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-section input,
+    .form-section select {
+        width: 100%;
+    }
+}

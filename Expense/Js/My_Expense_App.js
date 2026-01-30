@@ -1,6 +1,23 @@
 // ================= GLOBAL STATE =================
-let actualReserve = 50000; // previous month reserve
-document.getElementById("reserve").value = actualReserve;
+let actualReserve = 0;
+const userId = 3; // TEMP (replace with real login user id)
+
+async function loadActualReserve() {
+    try {
+        const response = await fetch(`http://localhost:8000/reserve/${userId}`);
+        const data = await response.json();
+
+        actualReserve = data.actualReserve;
+        document.getElementById("reserve").value = actualReserve;
+
+    } catch (error) {
+        console.error(error);
+        alert("Failed to load reserve amount");
+    }
+}
+
+// Load reserve when page loads
+window.onload = loadActualReserve;
 
 // ================= SPLIT TOGGLE =================
 function toggleSplit() {
@@ -126,3 +143,55 @@ const amountInput = () => Number(document.getElementById("amount").value);
 const isSplitYes = () => document.getElementById("isSplit").value === "yes";
 const splitCount = (isSplit) =>
     isSplit ? Number(document.getElementById("persons").value) : 1;
+
+// ================= SUBMIT ALL EXPENSES =================
+async function submitExpenses() {
+    const rows = document.querySelectorAll("#expenseTable tbody tr");
+
+    if (rows.length === 0) {
+        alert("No expenses to submit");
+        return;
+    }
+
+    const expenses = [];
+
+    rows.forEach(row => {
+        const cells = row.cells;
+
+        expenses.push({
+            userid : 3 ,
+            category: cells[0].innerText,
+            detail: cells[1].innerText,
+            date: cells[2].innerText,
+            total_amount: Number(cells[3].innerText),
+            my_share: Number(cells[4].innerText),
+            outstanding_reserve: Number(cells[5].innerText),
+            split_count: Number(cells[6].innerText)
+        });
+    });
+    console.log(expenses);
+    try {
+        const response = await fetch("http://localhost:8000/expenses", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                expenses: expenses
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("Expenses saved successfully ✅");
+        } else {
+            alert(data.detail || "Failed to save expenses");
+        }
+
+    } catch (err) {
+        console.error(err);
+        alert("Backend not reachable");
+    }
+}
+

@@ -1,0 +1,23 @@
+1) Reserve amount logic change in Js 
+2) Before Showing the expense that was going to be added in the func addExpense(),
+ we need get the data from backend is there any expense for made by the user for the same date.If yes
+ then we need to show that expense also along with the new expense that is going to be added.
+
+
+Expected for Month :
+1) MOd in html: 
+    a) Living Expense
+    b) Work Investement 
+    c) Submit button after all the changes were made
+    d) Another tab below which shows the expected expense of that month from the backend 
+    e) Add a tab for savings
+2) add css accordinly 
+3) Js 
+    a)if savings is less than zero in ask in front end and post it in backend
+    b) Api endpoints:
+        Savings-post
+        Savings-get
+        Expense-post
+        Expense-get
+4) Give me the Python code - server code accordingly 
+5) Give me the ddls for all the tables
