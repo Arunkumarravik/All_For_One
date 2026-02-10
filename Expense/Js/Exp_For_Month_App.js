@@ -1,4 +1,5 @@
-const userId = sessionStorage.getItem("user_id");
+/*const userId = sessionStorage.getItem("user_id");*/
+const userId = 3;  // Temporary hardcoded user ID for testing
 document.getElementById("userName").innerText = userId;
 
 const API_BASE = "http://localhost:8000/api";
@@ -36,7 +37,7 @@ function showWork() {
 /* ---------------- PLANNED LOGIC ---------------- */
 function isPlanned() {
     const today = new Date();
-    return today.getDate() <= 7;
+    return today.getDate() <= 7 && today.getDate() >= 27;
 }
 
 /* ---------------- ADD LIVING ---------------- */
